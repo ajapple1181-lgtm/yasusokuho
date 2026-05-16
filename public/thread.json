@@ -1,11 +1,68 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-05-16T00:00:00+09:00",
   "source": {
-    "thread_id": "",
-    "author_username": "",
+    "thread_id": "manual",
+    "author_username": "yasu19510830",
     "include_others": false,
-    "query": ""
+    "query": "manual input"
   },
-  "match": {},
-  "tweets": []
+  "match": {
+    "title": "第74回岐阜県高等学校総合体育大会 軟式野球競技",
+    "subtitle": "準決勝 第1試合",
+    "date": "2026-05-16",
+    "venue": "夜明け前スタジアム",
+    "awayTeam": "恵那",
+    "homeTeam": "多治見北",
+    "innings": 7
+  },
+  "tweets": [
+    {
+      "id": "manual-001",
+      "text": "試合開始\n恵那 vs 多治見北",
+      "created_at": "2026-05-16T09:00:00+09:00",
+      "conversation_id": "manual",
+      "parent_id": null,
+      "depth": 0,
+      "reply_order": 1,
+      "author": {
+        "id": "",
+        "name": "yasu",
+        "username": "yasu19510830",
+        "profile_image_url": ""
+      },
+      "url": "https://x.com/yasu19510830"
+    },
+    {
+      "id": "manual-002",
+      "text": "1回表 恵那の攻撃\n三者凡退でチェンジ",
+      "created_at": "2026-05-16T09:08:00+09:00",
+      "conversation_id": "manual",
+      "parent_id": "manual-001",
+      "depth": 1,
+      "reply_order": 2,
+      "author": {
+        "id": "",
+        "name": "yasu",
+        "username": "yasu19510830",
+        "profile_image_url": ""
+      },
+      "url": "https://x.com/yasu19510830"
+    },
+    {
+      "id": "manual-003",
+      "text": "1回裏 多治見北の攻撃\n先制点\n恵那 0-1 多治見北",
+      "created_at": "2026-05-16T09:18:00+09:00",
+      "conversation_id": "manual",
+      "parent_id": "manual-002",
+      "depth": 1,
+      "reply_order": 3,
+      "author": {
+        "id": "",
+        "name": "yasu",
+        "username": "yasu19510830",
+        "profile_image_url": ""
+      },
+      "url": "https://x.com/yasu19510830"
+    }
+  ]
 }
