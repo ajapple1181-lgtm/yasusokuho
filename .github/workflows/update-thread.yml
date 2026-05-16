@@ -1,10 +1,10 @@
-name: Update X Baseball Live
+name: Deploy Baseball Live Page
 
 on:
   workflow_dispatch:
-  # 自動更新したい場合だけ下を有効化
-  # schedule:
-  #   - cron: "*/15 * * * *"
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -16,11 +16,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  update-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     environment:
       name: github-pages
@@ -29,20 +26,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: 24
-
-      - name: Fetch X thread
-        run: npm run fetch
-        env:
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-          THREAD_ID: ${{ vars.THREAD_ID }}
-          AUTHOR_USERNAME: ${{ vars.AUTHOR_USERNAME }}
-          INCLUDE_OTHERS: ${{ vars.INCLUDE_OTHERS }}
-          MAX_PAGES: 6
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
