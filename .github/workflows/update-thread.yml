@@ -1,9 +1,10 @@
 name: Update X Baseball Live
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
+  # 自動更新したい場合だけ下を有効化
+  # schedule:
+  #   - cron: "*/15 * * * *"
 
 permissions:
   contents: read
@@ -18,18 +19,21 @@ jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Fetch X thread
         run: npm run fetch
