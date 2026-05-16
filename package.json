@@ -1,0 +1,9 @@
+{
+  "name": "x-baseball-live",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-thread.mjs"
+  }
+}
