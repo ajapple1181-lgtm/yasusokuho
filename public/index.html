@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>高校軟式野球 速報</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">高校軟式野球 LIVE</p>
+      <h1 id="pageTitle">試合速報</h1>
+      <p id="pageSub" class="sub">読み込み中...</p>
+    </div>
+    <div class="liveBadge">
+      <span class="dot"></span>
+      速報
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="scoreCard">
+      <div class="scoreMeta">
+        <span id="gameStatus">試合情報を取得中</span>
+        <span id="updatedAt">--</span>
+      </div>
+
+      <div class="scoreBoard">
+        <div class="teamRow">
+          <div id="awayName" class="teamName">先攻</div>
+          <div id="awayScore" class="totalScore">-</div>
+        </div>
+        <div class="teamRow">
+          <div id="homeName" class="teamName">後攻</div>
+          <div id="homeScore" class="totalScore">-</div>
+        </div>
+      </div>
+
+      <div class="miniLineScore" id="miniLineScore"></div>
+    </section>
+
+    <section class="feedHeader">
+      <h2>一球速報・試合経過</h2>
+      <p>投稿本文から自動で「回」「得点」「安打」「交代」などを判定しています。</p>
+    </section>
+
+    <section id="feed" class="feed"></section>
+
+    <section id="empty" class="empty" hidden>
+      まだ表示できる投稿がありません。GitHub Actionsの実行後に更新されます。
+    </section>
+  </main>
+
+  <footer class="footer">
+    Xの投稿をもとにした非公式の速報表示です。情報は投稿内容に依存します。
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
